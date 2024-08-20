@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            margin-top: 5px;
+            padding: 5px;
+            width: 100%;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Command Generator</h1>
+    <label for="swap_command">Swap Command:</label>
+    <input type="number" id="swap_command" value="1">
+
+    <label for="rider_id">Rider ID:</label>
+    <input type="number" id="rider_id" value="2908">
+
+    <label for="battery_id">Battery ID:</label>
+    <input type="number" id="battery_id" value="1753">
+
+    <button onclick="generateCommand()">Generate Command</button>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
