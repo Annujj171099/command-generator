@@ -29,5 +29,27 @@ function generateCommand() {
         littleEndianCommand |= BigInt(bytes[i]) << BigInt(i * 8);
     }
 
-    document.getElementById('result').textContent = `Command: 0x${littleEndianCommand.toString(16).toLowerCase().padStart(16, '0')}`;
+    // Format as JSON
+    const can_payload = `0x${littleEndianCommand.toString(16).toLowerCase().padStart(16, '0')}`;
+    const seq_id = '01'; // Placeholder for sequence ID
+    const can_id = '0190'; // Placeholder for CAN ID
+
+    const resultObject = {
+        "can_payload": can_payload,
+        "seq_id": seq_id,
+        "can_id": can_id
+    };
+
+    // Convert resultObject to JSON string
+    const resultJSON = JSON.stringify(resultObject, null, 2);
+
+    // Display result as JSON
+    document.getElementById('result').textContent = resultJSON;
+
+    // Copy result to clipboard
+    navigator.clipboard.writeText(resultJSON).then(() => {
+        console.log('Copied to clipboard successfully!');
+    }).catch(err => {
+        console.error('Failed to copy to clipboard: ', err);
+    });
 }
