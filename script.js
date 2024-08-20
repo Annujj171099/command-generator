@@ -29,5 +29,5 @@ function generateCommand() {
         littleEndianCommand |= BigInt(bytes[i]) << BigInt(i * 8);
     }
 
-    document.getElementById('result').textContent = `CommandHello: 0x${littleEndianCommand.toString(16).toUpperCase().padStart(16, '0')}`;
+    document.getElementById('result').textContent = `Command: 0x${littleEndianCommand.toString(16).toLowerCase().padStart(16, '0')}`;
 }
