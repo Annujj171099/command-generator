@@ -30,7 +30,7 @@ function generateCommand() {
     }
 
     // Format as JSON
-    const can_payload = `0x${littleEndianCommand.toString(16).toLowerCase().padStart(16, '0')}`;
+    const can_payload = `${littleEndianCommand.toString(16).toLowerCase().padStart(16, '0')}`;
     const seq_id = '01'; // Placeholder for sequence ID
     const can_id = '0190'; // Placeholder for CAN ID
 
