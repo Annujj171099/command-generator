@@ -46,11 +46,10 @@ function generateCommand() {
     // Display result as JSON
     document.getElementById('result').textContent = resultJSON;
 
-    // Copy result to clipboard
+    // Copy result to clipboard and open URL in new tab
     navigator.clipboard.writeText(resultJSON).then(() => {
         console.log('Copied to clipboard successfully!');
-        
-        // Redirect to the specified URL in a new tab
+        // Open the URL in a new tab
         window.open('https://electorq.bytebeam.io/projects/electorq/device-management/devices', '_blank');
     }).catch(err => {
         console.error('Failed to copy to clipboard: ', err);
