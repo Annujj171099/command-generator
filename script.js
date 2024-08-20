@@ -1,5 +1,5 @@
 function generateCommand() {
-    let swap_command = parseInt(document.getElementById('swap_command').value, 10);
+    const swap_command = 1; // Set swap_command as a constant value of 1
     let rider_id = parseInt(document.getElementById('rider_id').value, 10);
     let battery_id = parseInt(document.getElementById('battery_id').value, 10);
 
