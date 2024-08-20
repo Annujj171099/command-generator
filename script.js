@@ -49,6 +49,9 @@ function generateCommand() {
     // Copy result to clipboard
     navigator.clipboard.writeText(resultJSON).then(() => {
         console.log('Copied to clipboard successfully!');
+        
+        // Redirect to the specified URL in a new tab
+        window.open('https://electorq.bytebeam.io/projects/electorq/device-management/devices', '_blank');
     }).catch(err => {
         console.error('Failed to copy to clipboard: ', err);
     });
